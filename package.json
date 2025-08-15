@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-"dev": "vinxi dev",
-"build": "npx convex codegen && vinxi build && rm -rf dist && mkdir -p dist/client netlify/edge-functions && cp -R .vinxi/build/client/_build dist/client/ && cp .vinxi/build/server/_server/server.js netlify/edge-functions/server.js",
-"start": "vinxi start",
-"serve": "vite preview"
-}
-   "dependencies": {
+    "dev": "vinxi dev",
+    "build": "npx convex codegen && vinxi build && rm -rf dist && mkdir -p dist/client netlify/edge-functions && cp -R .vinxi/build/client/_build dist/client/ && cp .vinxi/build/server/_server/server.js netlify/edge-functions/server.js",
+    "start": "vinxi start",
+    "serve": "vite preview"
+  },
+  "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@sentry/react": "^9.5.0",
     "@sentry/vite-plugin": "^3.2.2",
