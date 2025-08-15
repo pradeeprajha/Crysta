@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".vinxi/build/client/_build"
+  publish = "dist/client"
 
 [functions]
   directory = "netlify/functions"
