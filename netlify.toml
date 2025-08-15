@@ -1,10 +1,14 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+command = "npm run build"
+publish = "dist/client" # TanStack/Vinxi outputs client assets here
 
 [functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
+directory = "netlify/functions"
+node_bundler = "esbuild"
 
 [build.environment]
-  NODE_VERSION = "20"
+NODE_VERSION = "20"
+
+[[edge_functions]]
+function = "server"
+path = "/*"
