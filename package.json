@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "vinxi start",
-    "build": "vinxi build",
-    "serve": "vite preview",
-    "dev": "vinxi dev"
-  },
-  "dependencies": {
+"dev": "vinxi dev",
+"build": "npx convex codegen && vinxi build",
+"start": "vinxi start",
+"serve": "vite preview"
+},
+   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@sentry/react": "^9.5.0",
     "@sentry/vite-plugin": "^3.2.2",
