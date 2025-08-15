@@ -1,7 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist/client"
+  functions = "netlify/functions"
+
 [functions]
-node_bundler = "esbuild"
+  node_bundler = "esbuild"
 
 [[redirects]]
-from = "/*"
-to = "/.netlify/functions/server"
-status = 200
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
