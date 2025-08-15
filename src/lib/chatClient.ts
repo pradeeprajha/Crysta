@@ -1,6 +1,11 @@
-// src/api.ts
-export default async function handler() {
-  // Minimal stub to satisfy the API router.
-  // You don't use TanStack API routes, so just return 404.
-  return new Response('Not Found', { status: 404 })
+// src/lib/chatClient.ts
+export async function sendMessage(userMessage: string) {
+  const res = await fetch('/.netlify/functions/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userMessage }),
+  })
+  if (!res.ok) throw new Error('Request failed')
+  const data = await res.json()
+  return data.text as string
 }
